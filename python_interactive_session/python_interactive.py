@@ -5,6 +5,9 @@
 # File:             python_interactive.py
 # -----------------------------------------------------------------------
 
->>> print("hellow world")
+>>> print("hello world")
 
 """ How to make it work """
+
+if __name__ == '__main__':
+    print("Hello World")
