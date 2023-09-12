@@ -1,0 +1,11 @@
+<html>
+
+  <head>
+    <title>Sample PSE Application</title>
+  </head>
+
+  <body>
+    <? print "Hello, world!" ?>
+  </body>
+
+</html>
