@@ -71,4 +71,4 @@ plus_one(4)
 Some Decorator Use Case:
 
 1. Add Decorator to close the connection
-2. 
+2. The retry decorator
