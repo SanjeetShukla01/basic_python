@@ -47,20 +47,36 @@
 #     my_slow_function()
 
 
-from memory_profiler import profile
-import random
+# from memory_profiler import profile
+# import random
+#
+#
+# @profile
+# def memory_intensive_function():
+#     data = [random.randint(1, 1000) for _ in range(1000000)]
+#     result = sum(data)
+#     del data  # To free up memory
+#     return result
 
 
-@profile
-def memory_intensive_function():
-    data = [random.randint(1, 1000) for _ in range(1000000)]
-    result = sum(data)
-    del data  # To free up memory
-    return result
+
+# if __name__ == "__main__":
+#     result = memory_intensive_function()
+#     print("Result:", result)
 
 
+import timeit
+
+# Define a function to be benchmarked
+def example_function():
+    total = 0
+    for i in range(1000):
+        total += i
+    return total
+
+# Measure the execution time of the function using timeit
 if __name__ == "__main__":
-    result = memory_intensive_function()
-    print("Result:", result)
+    execution_time = timeit.timeit("example_function()", globals=globals(), number=10000)
+    print("Execution Time:", execution_time, "seconds")
 
 
